@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 15:06:21 by ehattab           #+#    #+#             */
-/*   Updated: 2025/05/10 18:50:20 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/05/12 16:55:20 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ int	main(int ac, char **av)
 	int		*tab;
 	t_stack	*a;
 
+	if (ac < 2)
+		return (0);
 	if (ac == 2)
 	{
 		av2 = ft_split(av[1], 32);
 		av = av2;
 	}
-	if (ac < 2)
-		ft_error("Error\n");
 	if (ac == 2)
 		check_all(av);
 	else
@@ -66,8 +66,9 @@ void	part2(int *tab, t_stack *a)
 	else if (is_sort(a) && ft_listlen(&a) == 5)
 		small_sort5(&a, &b);
 	else if (is_sort(a) && ft_listlen(&a) > 5)
-		radix(&a, &b, t);
-	print_stack(a, b);
+		big_sort_radix(&a, &b, t);
 	free_all(&a, &b, tab, t);
 	return ;
 }
+
+	// print_stack(a, b);

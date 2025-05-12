@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:29:11 by ehattab           #+#    #+#             */
-/*   Updated: 2025/05/10 16:05:11 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/05/12 16:55:52 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ void	rrr(t_stack **a, t_stack **b)
 	ft_printf("rrr\n");
 }
 
-// void	ned(t_struct *t)
-// {
-// 	t->bitslen = 0;
-// 	while ((t->len - 1) >> t->bitslen != 0)
-// 		t->bitslen++;
-// }
+void	max_bit_len(t_struct *t)
+{
+	t->bitslen = 0;
+	while ((t->len - 1) >> t->bitslen != 0)
+		t->bitslen++;
+}

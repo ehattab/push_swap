@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:05:40 by ehattab           #+#    #+#             */
-/*   Updated: 2025/05/10 18:12:52 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/05/12 16:45:51 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,20 @@ void	check_all(char **av)
 	while (av[i])
 	{
 		if (is_number(av[i]) == 1)
+		{
+			free(av);
 			ft_error("Error\n");
+		}
 		if (check_duplicate(av, av[i], i) == 1)
+		{
+			free(av);
 			ft_error("Error\n");
+		}
 		if (ft_long_atoi(av[i]) > INT_MAX || ft_long_atoi(av[i]) < INT_MIN)
+		{
+			free(av);
 			ft_error("Error\n");
+		}
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 15:05:44 by ehattab           #+#    #+#             */
-/*   Updated: 2025/05/10 18:50:27 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/05/12 16:39:23 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	small_sort3(t_stack **a);
 void	small_sort4(t_stack **a, t_stack **b);
 void	found_first(t_stack **a, t_stack **b, unsigned int i);
 void	small_sort5(t_stack **a, t_stack **b);
-void	ned(t_struct *t);
-void	radix(t_stack **a, t_stack **b, t_struct *t);
+void	max_bit_len(t_struct *t);
+void	big_sort_radix(t_stack **a, t_stack **b, t_struct *t);
 
 #endif

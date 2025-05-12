@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 21:18:42 by ehattab           #+#    #+#             */
-/*   Updated: 2025/05/10 19:12:01 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/05/12 16:55:37 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ void	small_sort5(t_stack **a, t_stack **b)
 	pa(a, b);
 }
 
-void	radix(t_stack **a, t_stack **b, t_struct *t)
+void	big_sort_radix(t_stack **a, t_stack **b, t_struct *t)
 {
 	int	tmp;
 	int	i;
@@ -112,7 +112,7 @@ void	radix(t_stack **a, t_stack **b, t_struct *t)
 	i = -1;
 	t->k = 0;
 	t->len = ft_listlen(a);
-	ned(t);
+	max_bit_len(t);
 	while (++i < t->bitslen)
 	{
 		j = -1;
@@ -131,9 +131,9 @@ void	radix(t_stack **a, t_stack **b, t_struct *t)
 	}
 }
 
-void	ned(t_struct *t)
-{
-	t->bitslen = 0;
-	while ((t->len - 1) >> t->bitslen != 0)
-		t->bitslen++;
-}
+// void	max_bit_len(t_struct *t)
+// {
+// 	t->bitslen = 0;
+// 	while ((t->len - 1) >> t->bitslen != 0)
+// 		t->bitslen++;
+// }
