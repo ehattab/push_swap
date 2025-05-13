@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 19:56:38 by ehattab           #+#    #+#             */
-/*   Updated: 2025/04/03 18:41:30 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/05/13 11:29:49 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char	*ft_cpy(char **res, const char *s, char sep)
 		if (len > 0)
 		{
 			*res = malloc(len + 1);
-			if (*res == NULL)
+			if (res == NULL)
 				return (NULL);
 			ft_strlcpy(*res, s - len, len + 1);
 			res++;

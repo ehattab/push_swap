@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 15:05:44 by ehattab           #+#    #+#             */
-/*   Updated: 2025/05/12 16:39:23 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/05/13 14:30:24 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,10 @@ void	found_first(t_stack **a, t_stack **b, unsigned int i);
 void	small_sort5(t_stack **a, t_stack **b);
 void	max_bit_len(t_struct *t);
 void	big_sort_radix(t_stack **a, t_stack **b, t_struct *t);
+int		ft_count_word2(const char *s, char c);
+int		ft_cpy2(char **res, const char *s, char c);
+char	**ft_split2(char const *s, char c);
+void	ft_free_tab(char **res);
+void	check_all2(char **av);
 
 #endif

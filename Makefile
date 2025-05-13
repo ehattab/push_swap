@@ -1,4 +1,4 @@
-SRCS = push_swap.c parsing.c utils.c utils2.c instructions.c instructions2.c double.c algo.c utils3.c
+SRCS = push_swap.c parsing.c utils.c utils2.c instructions.c instructions2.c double.c algo.c utils3.c utils4.c
 OBJS = ${SRCS:.c=.o}
 NAME = push_swap
 CC = gcc

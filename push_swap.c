@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 15:06:21 by ehattab           #+#    #+#             */
-/*   Updated: 2025/05/12 16:55:20 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/05/13 14:31:07 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	free_all(t_stack **a, t_stack **b, int *tab, t_struct *t)
 
 int	main(int ac, char **av)
 {
-	char	**av2;
 	int		*tab;
 	t_stack	*a;
 
@@ -30,20 +29,20 @@ int	main(int ac, char **av)
 		return (0);
 	if (ac == 2)
 	{
-		av2 = ft_split(av[1], 32);
-		av = av2;
-	}
-	if (ac == 2)
+		av = ft_split2(av[1], 32);
 		check_all(av);
+	}
 	else
 	{
-		av2 = normalizer(av);
-		av = av2;
-		check_all(av);
+		av = normalizer(av); 
+		check_all2(av);
 	}
 	a = NULL;
 	tab = add_arg(&a, av);
-	free(av2);
+	if (ac == 2)
+		ft_free_tab(av);
+	else
+		free(av);
 	part2(tab, a);
 	return (0);
 }
