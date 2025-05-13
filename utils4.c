@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 11:36:12 by ehattab           #+#    #+#             */
-/*   Updated: 2025/05/13 14:19:58 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/05/13 14:52:26 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void	ft_free_tab(char **res)
 	i = 0;
 	while (res[i])
 	{
-		if(res[i] != NULL)
-			{
-				free(res[i]);
-				res[i] = NULL;
-			}
+		if (res[i] != NULL)
+		{
+			free(res[i]);
+			res[i] = NULL;
+		}
 		i++;
 	}
-	if(res != NULL)
+	if (res != NULL)
 	{
 		free(res);
 		res = NULL;

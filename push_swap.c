@@ -6,7 +6,7 @@
 /*   By: ehattab <ehattab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 15:06:21 by ehattab           #+#    #+#             */
-/*   Updated: 2025/05/13 14:31:07 by ehattab          ###   ########.fr       */
+/*   Updated: 2025/05/13 14:51:28 by ehattab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int ac, char **av)
 	}
 	else
 	{
-		av = normalizer(av); 
+		av = normalizer(av);
 		check_all2(av);
 	}
 	a = NULL;
